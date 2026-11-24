@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miscellaneous · Zixuan Dong (董子轩)</title>
+<meta name="description" content="Zixuan Dong (董子轩) outside of research: Kendo photos and tournaments.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&family=Inter:wght@400;500;600&family=Fondamento&family=Yuji+Boku&display=swap" rel="stylesheet">
+<style>
+/* 颜色、字体和导航与主页一致；改主页配色时这里也要同步 */
+/* 这一页固定深色；改回跟随系统就写 color-scheme:light dark */
+:root{color-scheme:dark;
+  --bg:light-dark(#ffffff,#0f1217);--ink:light-dark(#10131a,#e8eaee);
+  --mute:light-dark(#5b6170,#9aa1ad);--rule:light-dark(#e4e6ea,#262b34);
+  --panel:light-dark(#f5f6f8,#161a21);--red:light-dark(#c8321e,#ff7a5c);
+  --blue:light-dark(#2a5db0,#93b4ea)}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:80px;scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.6 Inter,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;overflow-x:clip}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 max(5vw,18px)}
+h1,h2,h3{font-family:Literata,"Songti SC","Noto Serif SC",Georgia,serif;font-weight:600;text-wrap:balance}
+
+/* nav */
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+nav .wrap{display:flex;align-items:center;gap:24px;min-height:64px;overflow-x:auto}
+nav .me{flex:none;margin-right:auto;padding:8px 0}
+nav .me img{display:block;width:auto;height:48px}
+nav a.l{flex:none;color:var(--ink);font-size:16px;font-weight:600;white-space:nowrap;padding:12px 0}
+nav a.l:hover,nav a.l[aria-current]{color:var(--blue);text-decoration:none}
+@media(max-width:600px){nav .wrap{gap:11px}nav a.l{font-size:14px}nav .w,nav .a{display:none}}
+
+/* opening */
+.head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px 40px;padding:clamp(36px,6vw,72px) 0 clamp(20px,3vw,32px)}
+h1{font-size:clamp(34px,5vw,50px);line-height:1.05;margin:0}
+.head p{margin:10px 0 0;color:var(--mute)}
+
+/* photos */
+figure{margin:0}
+.ph{display:block;border-radius:6px;overflow:hidden;background:var(--panel);cursor:zoom-in}
+.ph img{display:block;width:100%;height:100%;object-fit:cover}
+figcaption{font-size:13.5px;line-height:1.45;color:var(--mute);margin-top:8px}
+.lead .ph{aspect-ratio:2/1}
+.lead img{object-position:50% 35%}
+.mosaic{display:grid;grid-template-columns:8fr 9fr;gap:12px}
+.mosaic .tall{grid-row:span 2}
+.mosaic .ph{aspect-ratio:3/2}
+.mosaic .tall .ph{aspect-ratio:auto;height:100%}
+.mosaic .wide{grid-column:1/-1}
+.mosaic .wide .ph{aspect-ratio:2/1}
+.mosaic .wide img{object-position:50% 70%}
+.mosaic.even{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:600px){
+  .lead .ph,.mosaic .wide .ph{aspect-ratio:3/2}
+}
+
+/* sections */
+section{padding:clamp(28px,4vw,48px) 0;border-top:1px solid var(--rule)}
+h2{font-size:30px;line-height:1.2;margin:0}
+h2 .ja,h3 .ja{font-weight:400;color:var(--mute);margin-left:.4em;letter-spacing:.08em}
+.intro{margin:8px 0 24px;max-width:68ch}
+.block{margin-top:clamp(40px,6vw,64px)}
+h3{font-size:22px;line-height:1.3;margin:0 0 16px}
+h3 .when{font:400 15px/1 Inter,sans-serif;color:var(--mute);margin-left:.6em;white-space:nowrap}
+
+/* NYU Kendo Club */
+.club{display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:24px;align-items:center;margin-bottom:24px}
+.club p{margin:0;max-width:60ch}
+.club .sharky img{display:block;width:100%;height:auto;border-radius:6px;background:#fff}
+.events{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 24px}
+.event .ph{aspect-ratio:3/2;margin-bottom:14px}
+.event h4{font:600 17px/1.35 Literata,Georgia,serif;margin:0 0 4px}
+.event p{margin:0;font-size:15px;color:var(--mute)}
+.event .place{color:var(--red);font-weight:600}
+.event.text{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:20px}
+@media(max-width:600px){.events{grid-template-columns:minmax(0,1fr)}.club{grid-template-columns:minmax(0,1fr) 96px;gap:16px}}
+
+/* Kenzen Dojo quotation */
+.quote{margin:0 0 28px}
+.quote h4{font:400 18px/1.3 Fondamento,Literata,Georgia,serif;margin:0 0 10px}
+.quote .words{margin:0;font:400 17px/1.85 "Yuji Boku","Hiragino Mincho ProN","Yu Mincho",serif;text-wrap:pretty}
+.quote footer{border:0;padding:0;margin-top:10px;font:400 16px/1.5 "Yuji Boku","Hiragino Mincho ProN","Yu Mincho",serif}
+.quote cite{font-style:normal}
+
+/* enlarged photo */
+dialog{border:0;padding:0;background:none;max-width:100vw;max-height:100vh;margin:auto}
+dialog::backdrop{background:rgb(8 10 14/.9)}
+dialog img{display:block;max-width:94vw;max-height:90vh;border-radius:4px;cursor:zoom-out}
+dialog button{position:absolute;top:8px;right:8px;width:44px;height:44px;border:0;border-radius:50%;background:rgb(8 10 14/.7);color:#fff;font:24px/1 Inter,sans-serif;cursor:pointer}
+
+footer{border-top:1px solid var(--rule);padding:28px 0 40px;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="me" href="index.html"><img src="zekken.svg" width="60" height="86" alt="Zixuan Dong"></a>
+    <a class="l a" href="index.html#about">About</a>
+    <a class="l" href="index.html#news">News</a>
+    <a class="l" href="index.html#publications"><span class="w">Selected </span>Work</a>
+    <a class="l" href="index.html#teaching">Teaching</a>
+    <a class="l" href="index.html#service">Service</a>
+    <a class="l" href="misc.html" aria-current="page">Misc</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <header class="head">
+    <div>
+      <h1>Miscellaneous</h1>
+      <p>Outside of research.</p>
+    </div>
+  </header>
+
+  <section id="kendo">
+    <h2>Kendo<span class="ja" lang="ja">剣道</span></h2>
+    <p class="intro">I am a Kendo practitioner with a rank of 2 Dan. Here are some shining moments along my way of Kendo!</p>
+
+    <figure class="lead">
+      <a class="ph" href="photos/web/202407_chengdu_1.jpg"><img src="photos/web/202407_chengdu_1.jpg" alt="Two kendo players in close contact, shinai crossed"></a>
+    </figure>
+
+    <div class="block">
+      <h3>Chengdu<span class="when">July 2024</span></h3>
+      <div class="mosaic">
+        <figure class="tall"><a class="ph" href="photos/web/202407_chengdu_2.jpg"><img src="photos/web/202407_chengdu_2.jpg" alt="A close exchange; the name tag reads NYU 董 DONG" loading="lazy"></a></figure>
+        <figure><a class="ph" href="photos/web/202407_chengdu_3.jpg"><img src="photos/web/202407_chengdu_3.jpg" alt="Both players in sonkyo, the crouch that opens a match" loading="lazy"></a></figure>
+        <figure><a class="ph" href="photos/web/202407_chengdu_4.jpg"><img src="photos/web/202407_chengdu_4.jpg" alt="Facing the opponent with shinai crossed" loading="lazy"></a></figure>
+        <figure class="wide"><a class="ph" href="photos/web/202407_chengdu_5.jpg"><img src="photos/web/202407_chengdu_5.jpg" alt="Kneeling at the side of the court with the mask off" loading="lazy"></a></figure>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>NYU Kendo Club<span class="when">2022 – 2023</span></h3>
+      <div class="club">
+        <p>I spent an unforgettable time in the NYU Kendo Club with my friends, my teammates, and my sensei: we sweated side by side, fought face to face, and bowed heart to heart. Find more incredible moments from NYU Kendo members on the <a href="https://www.nyukendo.org/achievements">NYU Kendo Club website</a>!</p>
+        <figure class="sharky"><img src="photos/web/nyu_kendo_sharky.jpg" alt="Sharky, a cartoon shark in kendo armor holding a shinai" loading="lazy"><figcaption>Sharky, the NYU Kendo mascot created by my friend <a href="https://junranshi.com/information">Charlotte</a>!</figcaption></figure>
+      </div>
+      <div class="events">
+        <article class="event">
+          <a class="ph" href="photos/web/202304_bu_1.jpg"><img src="photos/web/202304_bu_1.jpg" alt="NYU Kendo Club group photo at Boston University" loading="lazy"></a>
+          <h4>BUKai, Boston University</h4>
+          <p><span class="place">3rd place, team competition</span> · Apr 2023</p>
+          <p><a href="https://gonyuathletics.com/news/2023/4/25/campus-recreation-kendo-finishes-third-at-boston-university.aspx">NYU Athletics coverage</a></p>
+        </article>
+        <article class="event">
+          <a class="ph" href="photos/web/202303_columbia.jpg"><img src="photos/web/202303_columbia.jpg" alt="Seven NYU players with medals at the Columbia tournament" loading="lazy"></a>
+          <h4>Columbia tournament</h4>
+          <p><span class="place">3rd place, team competition</span> · Mar 2023</p>
+          <p><a href="https://www.nyukendo.org/achievements/columbia-2023">NYU Kendo Club results</a></p>
+        </article>
+        <article class="event text">
+          <h4>Harvard Intercollegiate Ryuko Taikai <span lang="ja">龍虎大会</span></h4>
+          <p><span class="place">3rd place, team competition (Fukusho)</span> · Mar 2022</p>
+          <p><a href="https://gonyuathletics.com/news/2022/3/22/campus-recreation-kendo-returns-to-competition-in-harvard-tournament.aspx">NYU Athletics coverage</a></p>
+        </article>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>Kenzen Dojo<span class="ja" lang="ja">剣禅道場</span></h3>
+      <blockquote class="quote">
+        <h4>The sword is the mind</h4>
+        <p class="words" lang="ja">剣とは心なり。<br>心正しければその剣正し。<br>心正しからざればその剣もまた正しからず。<br>剣を学ばんとするものはすべからくその心を学べ。</p>
+        <footer lang="ja"><cite>— 島田虎之助</cite></footer>
+      </blockquote>
+      <div class="mosaic even">
+        <figure class="tall"><a class="ph" href="photos/web/kenzen_dojo_2.jpg"><img src="photos/web/kenzen_dojo_2.jpg" alt="The front of Kenzen Dojo, with a scroll reading 不動心, a drum and a sword stand" loading="lazy"></a></figure>
+        <figure><a class="ph" href="photos/web/kenzen_dojo_3.jpg"><img src="photos/web/kenzen_dojo_3.jpg" alt="Practice in motion, shinai crossing the frame" loading="lazy"></a></figure>
+        <figure><a class="ph" href="photos/web/kenzen_dojo_1.jpg"><img src="photos/web/kenzen_dojo_1.jpg" alt="The front of the dojo: a drum, swords and New Year decorations" loading="lazy"></a></figure>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Zixuan Dong</span>
+    <span>Last updated November 2026</span>
+  </div>
+</footer>
+
+<dialog id="zoom" aria-label="Enlarged photo"><img alt=""><button type="button" aria-label="Close">×</button></dialog>
+<script>
+{
+  // 点照片放大；不支持 JS 时会直接打开图片
+  const d = document.getElementById('zoom'), big = d.querySelector('img');
+  for (const a of document.querySelectorAll('a.ph')) a.addEventListener('click', e => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault();
+    big.src = a.href;
+    big.alt = a.querySelector('img').alt;
+    d.showModal();
+  });
+  d.addEventListener('click', () => d.close());
+}
+</script>
+</body>
+</html>

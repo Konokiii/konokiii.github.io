@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zixuan Dong | RL &amp; Robotics | NYU</title>
+<!-- 写给搜索引擎看的身份信息，访客看不到。网址定下来后，把 url 改成你的真实网址 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Zixuan Dong",
+  "alternateName": "董子轩",
+  "url": "https://konokiii.github.io/",
+  "email": "mailto:zixuandong@nyu.edu",
+  "jobTitle": "Ph.D. Student in Computer Science",
+  "affiliation": [
+    {"@type": "CollegeOrUniversity", "name": "New York University", "url": "https://www.nyu.edu"},
+    {"@type": "CollegeOrUniversity", "name": "NYU Shanghai", "url": "https://shanghai.nyu.edu"}
+  ],
+  "alumniOf": {"@type": "CollegeOrUniversity", "name": "NYU Shanghai"},
+  "knowsAbout": ["Reinforcement Learning", "Robotics", "Deep Learning", "Neural Collapse"],
+  "knowsLanguage": ["zh", "en", "ja"],
+  "sameAs": [
+    "https://scholar.google.com/citations?user=lbtEL90AAAAJ",
+    "https://openreview.net/profile?id=~Zixuan_Dong1",
+    "https://github.com/Konokiii",
+    "https://www.linkedin.com/in/zixuandong1/",
+    "https://datascience.shanghai.nyu.edu/phd-students/zixuan-dong-dongzixuan"
+  ]
+}
+</script>
+<meta name="description" content="Zixuan Dong (董子轩) — Ph.D. student in Computer Science at NYU Shanghai & NYU Courant, working on deep reinforcement learning.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap" rel="stylesheet">
+<style>
+/*
+VOICE: calm, precise academic homepage; quiet confidence, lots of air.
+PICTURE: one full portrait photo beside the introduction.
+COLOUR and TYPE: white ground, ink #10131a, kendo indigo #2a5db0 for links and labels, vermilion #c8321e only for awards; Literata + Inter.
+MARK: a kendo name tag (zekken.svg) in the nav; 董 alone as the favicon.
+LAYOUT: header with name and about on the left, photo and contact icons on the right; then a single readable column of sections.
+*/
+/* 主页固定浅色；改回跟随系统就写 color-scheme:light dark */
+:root{color-scheme:light;
+  --bg:light-dark(#ffffff,#0f1217);--ink:light-dark(#10131a,#e8eaee);
+  --mute:light-dark(#5b6170,#9aa1ad);--rule:light-dark(#e4e6ea,#262b34);
+  --panel:light-dark(#f5f6f8,#161a21);--red:light-dark(#c8321e,#ff7a5c);
+  --blue:light-dark(#2a5db0,#93b4ea)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:80px;scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.6 Inter,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;overflow-x:clip}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+a:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 max(3vw,18px)}
+h1,h2,.serif{font-family:Literata,"Songti SC","Noto Serif SC",Georgia,serif}
+
+/* nav */
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+nav .wrap{display:flex;align-items:center;gap:24px;min-height:64px;overflow-x:auto}
+nav .me{flex:none;margin-right:auto;padding:8px 0}
+nav .me img{display:block;width:auto;height:48px}
+nav a.l{flex:none;color:var(--ink);font-size:16px;font-weight:600;white-space:nowrap;padding:12px 0}
+nav a.l:hover{color:var(--blue);text-decoration:none}
+@media(max-width:600px){nav .wrap{gap:11px}nav a.l{font-size:14px}nav .w,nav .a{display:none}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,min(34%,350px));gap:clamp(24px,5vw,64px);align-items:start;padding:clamp(36px,6vw,80px) 0 clamp(28px,4vw,48px)}
+h1{font-size:clamp(34px,5vw,50px);line-height:1.05;font-weight:600;margin:0 0 32px;text-wrap:balance}
+.portrait{margin:0}
+.portrait img{display:block;width:100%;height:auto;border-radius:6px;background:var(--panel)}
+h1 .zh{display:block;font-size:.46em;font-weight:400;color:var(--mute);margin-top:10px;letter-spacing:.08em}
+.contact{display:flex;flex-wrap:wrap;align-items:center;gap:2px;margin:10px 0 0 -11px}
+.contact a{display:grid;place-items:center;width:44px;height:44px;color:var(--mute)}
+.contact a:hover{color:var(--blue)}
+.contact svg{width:21px;height:21px;fill:currentColor}
+.contact a[title="Google Scholar"] svg{width:25px;height:25px}
+
+/* sections */
+section{padding:clamp(28px,4vw,48px) 0;border-top:1px solid var(--rule)}
+.sec{display:grid;grid-template-columns:190px minmax(0,1fr);gap:clamp(16px,3vw,40px)}
+h2{font-size:24px;line-height:1.2;font-weight:600;margin:0;white-space:nowrap}
+.about h2{margin-bottom:10px}
+.about p{margin:0}
+.about .sub3{margin:22px 0 10px}
+.about .tags{margin:0}
+.body p{margin:0 0 14px;max-width:68ch}
+.body p:last-child{margin-bottom:0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tags span{font-size:13.5px;padding:5px 12px;border-radius:4px;background:var(--panel);border:1px solid var(--rule)}
+@media(max-width:760px){.hero{grid-template-columns:minmax(0,1fr)}.portrait{order:-1;max-width:260px}.sec{grid-template-columns:minmax(0,1fr)}}
+
+/* news */
+.news{border-left:2px solid var(--rule);padding-left:24px}
+.news h3{position:relative;font:600 17px/1.4 Literata,Georgia,serif;margin:0 0 10px}
+.news h3::before{content:"";position:absolute;left:-30px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--blue)}
+.news ul{list-style:none;margin:0;padding:0}
+.news li{display:grid;grid-template-columns:3em minmax(0,1fr);gap:0 12px;padding:5px 0;line-height:1.55}
+.news time{color:var(--mute);font-size:15px}
+
+/* publications */
+.pubs{list-style:none;margin:0;padding:0;}
+.pubs li{padding:18px 0;border-bottom:1px solid var(--rule)}
+.pubs li:first-child{padding-top:0}.pubs li:last-child{border-bottom:0}
+.pubs p{font-family:Literata,Georgia,serif;font-size:16px;line-height:1.6;max-width:none}
+.pubs .pt{font-weight:600;font-size:18px;line-height:1.4;margin:0 0 3px}
+.pubs .au{color:var(--mute);margin:0 0 3px}
+.au b{color:var(--ink);font-weight:600}
+.pubs .venue{font-family:Newsreader,Georgia,serif;font-size:17px;font-style:italic;color:color-mix(in srgb,var(--ink) 85%,var(--bg));margin:0 0 10px}
+.meta{display:flex;flex-wrap:wrap;gap:8px}
+.btn,.prize{display:inline-block;padding:3px 13px;border:1px solid;border-radius:9px;font:600 13.5px/1.6 Literata,Georgia,serif}
+.btn{color:var(--blue);border-color:color-mix(in srgb,var(--blue) 55%,var(--bg));background:color-mix(in srgb,var(--blue) 6%,var(--bg))}
+.btn:hover{color:var(--bg);background:var(--blue);border-color:var(--blue);text-decoration:none}
+.prize{color:var(--red);border-color:color-mix(in srgb,var(--red) 55%,var(--bg));background:color-mix(in srgb,var(--red) 8%,var(--bg))}
+.prize:hover{color:var(--bg);background:var(--red);border-color:var(--red);text-decoration:none}
+.note{font-size:13.5px;color:var(--mute);margin:16px 0 0}
+.sub3{font:600 15px/1.3 Inter,sans-serif;color:var(--mute);margin:0 0 14px}
+.sum{font-size:15px;margin:6px 0 0;max-width:68ch}
+
+/* lists */
+.rows{list-style:none;margin:0;padding:0}
+.rows li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 20px;padding:12px 0;border-bottom:1px solid var(--rule)}
+.rows li:first-child{padding-top:0}.rows li:last-child{border-bottom:0}
+.rows .what{font-weight:500}
+.rows .where{color:var(--mute);font-size:15px;grid-column:1}
+.rows .when{color:var(--mute);font-size:14px;white-space:nowrap;grid-row:1;grid-column:2;font-variant-numeric:tabular-nums}
+.award{color:var(--red);font-weight:600;font-size:14px}
+
+footer{border-top:1px solid var(--rule);padding:28px 0 40px;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="me" href="#top"><img src="zekken.svg" width="60" height="86" alt="Zixuan Dong"></a>
+    <a class="l a" href="#about">About</a>
+    <a class="l" href="#news">News</a>
+    <a class="l" href="#publications"><span class="w">Selected </span>Work</a>
+    <a class="l" href="#teaching">Teaching</a>
+    <a class="l" href="#service">Service</a>
+    <a class="l" href="misc.html">Misc</a>
+  </div>
+</nav>
+
+<main class="wrap" id="top">
+  <header class="hero">
+    <div>
+      <h1>Zixuan Dong<span class="zh">董子轩</span></h1>
+      <div class="about" id="about">
+        <h2>About</h2>
+        <p>I am a Ph.D. student in Computer Science at NYU Courant, advised by <a href="https://sites.google.com/nyu.edu/keithross">Prof. Keith Ross</a>. My research interests span the theory and application of reinforcement learning (RL) and deep learning, with a primary focus on improving the sample efficiency and representation learning of deep RL algorithms for robotic control. Prior to my Ph.D., I earned a B.Sc. in Honors Mathematics and Data Science with a concentration in AI from NYU Shanghai. Outside of research, I am a <a href="misc.html#kendo">Kendo</a> practitioner.</p>
+        <h3 class="sub3">Research interests</h3>
+        <div class="tags">
+          <span>Reinforcement learning</span>
+          <span>Robotics</span>
+        </div>
+      </div>
+    </div>
+
+    <figure class="portrait">
+      <img src="photos/web/zixuandong.jpg" width="1024" height="1280" alt="Zixuan Dong, with a city skyline and a snow-capped mountain behind">
+      <div class="contact">
+        <a href="mailto:zixuandong@nyu.edu" title="Email" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h20a1 1 0 0 1 1 1v.6l-11 7-11-7V5a1 1 0 0 1 1-1zM1 8v11a1 1 0 0 0 1 1h20a1 1 0 0 0 1-1V8l-11 7z"/></svg></a>
+        <a href="https://scholar.google.com/citations?user=lbtEL90AAAAJ&amp;hl=en" title="Google Scholar" aria-label="Google Scholar"><svg viewBox="-25 -775 800 800" aria-hidden="true"><path d="M672 -666Q684 -664 684 -646L684 -395Q684 -389 681 -384Q678 -379 673 -376Q668 -373 662 -373L654 -373Q650 -373 646 -376Q641 -379 638 -384Q635 -389 635 -395L635 -646Q635 -666 646 -666L646 -699L535 -609Q537 -607 537 -605Q539 -604 539 -604Q555 -576 555 -537Q555 -508 544 -483Q533 -459 520 -444Q506 -430 491 -417Q477 -404 466 -391Q455 -377 455 -363Q455 -350 469 -335Q482 -320 502 -305Q520 -291 539 -273Q559 -258 571 -230Q584 -203 584 -172Q584 -129 563 -95Q541 -61 506 -40Q471 -20 432 -10Q393 0 354 0Q328 0 303 -4Q277 -8 252 -18Q227 -27 207 -42Q188 -57 175 -79Q162 -102 162 -131Q162 -164 181 -192Q199 -221 230 -240Q285 -273 398 -281Q373 -314 373 -344Q373 -359 381 -379Q367 -377 354 -377Q291 -377 249 -417Q207 -457 207 -520Q207 -525 207 -531L39 -531L293 -750L711 -750L672 -721ZM477 -221Q465 -230 462 -232Q459 -234 445 -244Q432 -254 430 -256Q422 -258 410 -258Q381 -258 354 -252Q326 -246 300 -235Q273 -225 257 -202Q240 -180 240 -148Q240 -121 255 -99Q270 -76 293 -63Q316 -51 342 -45Q369 -37 395 -37Q449 -37 487 -62Q525 -86 525 -137Q525 -146 522 -156Q520 -166 517 -174Q514 -182 506 -191Q498 -199 492 -205Q488 -211 477 -221ZM395 -402Q434 -402 455 -429Q477 -455 477 -494Q477 -527 465 -564Q453 -602 427 -631Q400 -660 365 -660Q326 -660 306 -632Q285 -604 285 -564Q285 -529 296 -494Q307 -459 333 -431Q359 -402 395 -402Z"/></svg></a>
+        <a href="https://github.com/Konokiii" title="GitHub" aria-label="GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
+        <a href="https://www.linkedin.com/in/zixuandong1/" title="LinkedIn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      </div>
+    </figure>
+  </header>
+
+  <section id="news">
+    <div class="sec">
+      <h2>News</h2>
+      <!-- 加新动态：在最上面复制一行 <li>；换年份时，在上面加一组新的 <h3>年份</h3><ul>…</ul> -->
+      <div class="news">
+        <h3>2026</h3>
+        <ul>
+          <li><time datetime="2026-11">Nov</time><span>Our new work <a href="https://tinaliu0123.github.io/PolicyIK/">PolicyIK</a> is now available on arXiv. It was exciting to get hands-on experience training RL directly on a real OpenArm to learn its inverse kinematics!</span></li>
+          <li><time datetime="2026-09">Sep</time><span>Our paper <a href="https://neurips.cc/virtual/2026/loc/sydney/poster/148252">Geometric Analysis of Neural Regression Collapse</a> has been accepted to NeurIPS 2026. See you on the beach in Sydney!</span></li>
+          <li><time datetime="2026-08">Aug</time><span>Presented our work <a href="https://rl-conference.cc/2026/RLC2026Awards.html">Minimal Reward Ingredients</a> at RLC 2026 in Montréal. Very fortunate to receive the Outstanding Paper Award for Scientific Understanding in Reinforcement Learning!</span></li>
+          <li><time datetime="2026-07">Jul</time><span>Attended ICML 2026 in Seoul as a Gold Reviewer.</span></li>
+          <li><time datetime="2026-05">May</time><span>Our work <a href="https://arxiv.org/abs/2506.06793">Minimal Reward Ingredients</a> has been accepted to RLC 2026.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="sec">
+      <h2>Selected Work</h2>
+      <div class="body">
+        <!-- 加新论文：复制一个 <li>…</li> 改内容；想加一句话总结，就在作者下面加 <p class="sum">…</p> -->
+        <ol class="pubs">
+          <li>
+            <p class="pt">PolicyIK: High-Precision Inverse Kinematics for Robot Arms with Reinforcement Learning</p>
+            <p class="au">Yuhan Liu*, Xinqi Liu*, <b>Zixuan Dong*</b>, Keith Ross, Shenji Wan</p>
+            <p class="venue">arXiv preprint arXiv:2611.05372, 2026</p>
+            <div class="meta">
+              <a class="btn" href="https://arxiv.org/abs/2611.05372">Paper</a>
+              <a class="btn" href="https://tinaliu0123.github.io/PolicyIK/">Website</a>
+              <a class="btn" href="https://github.com/Tinaliu0123/PolicyIK">Code</a>
+            </div>
+          </li>
+          <li>
+            <p class="pt">Geometric Analysis of Neural Regression Collapse via Intrinsic Dimension</p>
+            <p class="au"><b>Zixuan Dong*</b>, Bimarsha Adhikari*, George Andriopoulos*, Keith Ross</p>
+            <p class="venue">Conference on Neural Information Processing Systems (NeurIPS), 2026</p>
+            <div class="meta">
+              <a class="btn" href="https://arxiv.org/abs/2510.01105">Paper</a>
+              <a class="btn" href="https://openreview.net/forum?id=zGe5UWouYJ">OpenReview</a>
+            </div>
+          </li>
+          <li>
+            <p class="pt">Minimal Ingredients for Reward Assignment from Expert Demonstrations</p>
+            <p class="au"><b>Zixuan Dong*</b>, Yumi Omori*, Keith Ross</p>
+            <p class="venue">Reinforcement Learning Conference (RLC), 2026</p>
+            <div class="meta">
+              <a class="btn" href="https://arxiv.org/abs/2506.06793">Paper</a>
+              <a class="btn" href="https://github.com/Konokiii/Minimalist_RL_Reward">Code</a>
+              <a class="btn" href="https://openreview.net/forum?id=pdbsun6gys">OpenReview</a>
+              <a class="prize" href="https://rl-conference.cc/2026/RLC2026Awards.html">Outstanding Paper Award: Scientific Understanding in Reinforcement Learning</a>
+            </div>
+          </li>
+          <li>
+            <p class="pt">Cross Entropy versus Label Smoothing: A Neural Collapse Perspective</p>
+            <p class="au">Li Guo, George Andriopoulos, Zifan Zhao, <b>Zixuan Dong</b>, Shuyang Ling, Keith Ross</p>
+            <p class="venue">Transactions on Machine Learning Research (TMLR), 2025</p>
+            <div class="meta">
+              <a class="btn" href="https://arxiv.org/abs/2402.03979">Paper</a>
+              <a class="btn" href="https://github.com/glbreeze/neural_collapse_ls_vs_ce">Code</a>
+              <a class="btn" href="https://openreview.net/forum?id=FEo55EIvGI">OpenReview</a>
+            </div>
+          </li>
+          <li>
+            <p class="pt">The Prevalence of Neural Collapse in Neural Multivariate Regression</p>
+            <p class="au">George Andriopoulos*, <b>Zixuan Dong*</b>, Li Guo*, Zifan Zhao*, Keith Ross*</p>
+            <p class="venue">Conference on Neural Information Processing Systems (NeurIPS), 2024</p>
+            <div class="meta">
+              <a class="btn" href="https://arxiv.org/abs/2409.04180">Paper</a>
+              <a class="btn" href="https://openreview.net/forum?id=Wq6aY6fC2H">OpenReview</a>
+            </div>
+          </li>
+          <li>
+            <p class="pt">Pre-training with Synthetic Data Helps Offline Reinforcement Learning</p>
+            <p class="au">Zecheng Wang*, Che Wang*, <b>Zixuan Dong*</b>, Keith Ross</p>
+            <p class="venue">International Conference on Learning Representations (ICLR), 2024</p>
+            <div class="meta">
+              <a class="btn" href="https://arxiv.org/abs/2310.00771">Paper</a>
+              <a class="btn" href="https://github.com/Victor-wang-902/synthetic-pretrain-rl">Code</a>
+              <a class="btn" href="https://openreview.net/forum?id=PcxQgtHGj2">OpenReview</a>
+            </div>
+          </li>
+        </ol>
+        <p class="note">* Equal contribution.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="teaching">
+    <div class="sec">
+      <h2>Teaching</h2>
+      <div class="body">
+        <ul class="rows">
+          <li><span class="what">Laboratory Leader, Introduction to Computer Programming (CSCI-SHU 11)</span><span class="where">NYU Shanghai</span><span class="when">Fall 2024</span></li>
+          <li><span class="what">Guest Lecturer, Advanced Topics in AI and Machine Learning (CS-UH 3212)</span><span class="where">NYU Abu Dhabi · Lectures on imitation learning and offline RL</span><span class="when">Spring 2024, 2025</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="service">
+    <div class="sec">
+      <h2>Service</h2>
+      <div class="body">
+        <ul class="rows">
+          <li><span class="what">Reviewer, ICML 2026</span><span class="where"><a class="award" href="documents/icml26_reviewer_confirmation.pdf">Gold Reviewer Award</a></span></li>
+          <li><span class="what">Reviewer, NeurIPS 2025, 2026 · ICLR 2026, 2027 · ICRA 2026</span></li>
+          <li><span class="what">Journal reviewer, Expert Systems with Applications, 2026</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Zixuan Dong</span>
+    <span>Last updated November 2026</span>
+  </div>
+</footer>
+</body>
+</html>
